@@ -29,6 +29,17 @@ const fonts = [
       attr: "src",
     },
   },
+  // {
+  //   link: "https://www.mundodeportivo.com/padel",
+  //   name: "Mundo Deportivo",
+  //   css: "a picture",
+  //   title: "alt",
+  //   href: "href",
+  //   photo: {
+  //     children: "img",
+  //     attr: "src",
+  //   },
+  // },
 ];
 
 const allArticles = [];
@@ -58,26 +69,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/news", (req, res) => {
-  //ESTE FUNCIONANDO BIEN !!
-  // axios
-  //   .get("https://www.analistaspadel.com/")
-  //   .then((response) => {
-  //     const html = response.data;
-  //     const $ = cheerio.load(html);
-  //     const selector = $(".td-module-thumb a");
-  //     selector.each((idx, el) => {
-  //       const article = { name: "", web: "", photo: "" };
-  //       article.name = $(el).attr("title");
-  //       article.web = $(el).attr("href");
-  //       article.photo = $(el).children("span").attr("data-bg");
-  //       allArticles.push(article);
-  //     });
-  //     res.json(allArticles);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //   });
-
   res.json(allArticles);
 });
 
